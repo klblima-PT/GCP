@@ -1,0 +1,34 @@
+postgres_tables_raw_shipay_historico
+[
+    #{"schema": "public", "table": "bank_slip", "type": "full", "data_type_exists": True, "table_size": "large"},
+    #{"schema": "public", "table": "orders", "type": "full", "data_type_exists": True, "table_size": "large"},
+    #{"schema": "public", "table": "pos_products", "type": "full", "data_type_exists": True, "table_size": "small"},
+    #{"schema": "public", "table": "pos_vendors", "type": "full", "data_type_exists": True, "table_size": "small"},
+    #{"schema": "public", "table": "store_pos", "type": "full", "data_type_exists": True, "table_size": "large"},
+    #{"schema": "public", "table": "retail_chains", "type": "full", "data_type_exists": True, "table_size": "small"},
+    #{"schema": "public", "table": "stores", "type": "full", "data_type_exists": True, "table_size": "large"}
+    #{"schema": "public", "table": "customers", "type": "full", "data_type_exists": True, "table_size": "large"},
+    #{"schema": "public", "table": "system_wallets", "type": "full", "data_type_exists": True, "table_size": "small"},
+    #{"schema": "public", "table": "wallet_settings", "type": "full", "data_type_exists": True, "table_size": "large"}
+
+]
+
+
+
+
+[
+[
+
+ #################################################Delta - Daily########################################################
+
+	 {"schema": "public", "table": "bank_slip", "type": "delta", "data_type_exists": True, "table_size": "large", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "orders", "type": "delta", "data_type_exists": True, "table_size": "large", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "pos_products", "type": "delta", "data_type_exists": True, "table_size": "small", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "pos_vendors", "type": "delta", "data_type_exists": True, "table_size": "small", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "store_pos", "type": "delta", "data_type_exists": True, "table_size": "large", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "retail_chains", "type": "delta", "data_type_exists": True, "table_size": "small", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "stores", "type": "delta", "data_type_exists": True, "table_size": "large", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "customers", "type": "delta", "data_type_exists": True, "table_size": "large", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "system_wallets", "type": "delta", "data_type_exists": True, "table_size": "small", "column_primary" : "updated_at", "column_secondary": ""},
+     {"schema": "public", "table": "wallet_settings", "type": "delta", "data_type_exists": True, "table_size": "large", "column_primary" : "updated_at", "column_secondary": ""}
+]

@@ -1,0 +1,10 @@
+id  ,
+uuid  ,
+name  ,
+cnpj  ,
+email  ,
+active  ,
+cast(created_at as date) as created_at   ,
+updated_at   ,
+cast(degree as varchar(50)) as  degree ,
+external_crm_id  

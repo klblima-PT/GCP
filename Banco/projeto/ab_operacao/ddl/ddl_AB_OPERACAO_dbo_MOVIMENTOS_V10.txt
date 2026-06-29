@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS  `production-347022.ab_operaca.dbo_movimentos_v10` (
+IDCTR			string              ,
+NUMSUBCTR			string          ,
+NUMPARCELA			string          ,
+NUMMVTO			string              ,
+CODEVENTO			string          ,
+NUMSEQ			string              ,
+DATAOPERACAO			datetime    ,
+DATAREFERENCIA			datetime    ,
+VLRLANCTO			string			,
+TIPOGARANTIA			string,
+dt_carga_raw timestamp,
+	
+  PRIMARY KEY
+    () NOT ENFORCED
+)
+PARTITION BY  -- Replace by Client options sent
+
+CLUSTER BY 
+    
+
+OPTIONS (
+  DESCRIPTION = 'Table dbo_parcelas_varejo T clustered by id'
+); 

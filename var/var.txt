@@ -1,0 +1,44 @@
+
+Service account
+8331
+
+environment_variables
+
+{
+	"project_id":"production-347022",
+	"staging_location":"staging_shipay",
+	"KMSkey":"",
+	"temp_dir":"temp",
+	"bigquery_temp_dir":"bigquery_temp_data",
+	"subnetwork":""
+}
+
+postgres_tables_raw_shipay_daily
+[
+    {"schema": "public", "table": "bank_slip", "type": "full", "data_type_exists": True, "table_size": "small"},
+    {"schema": "public", "table": "bank_orders", "type": "full", "data_type_exists": True, "table_size": "large"},
+    {"schema": "public", "table": "bank_pos_products", "type": "full", "data_type_exists": True, "table_size": "small"},
+    {"schema": "public", "table": "bank_pos_vendors", "type": "full", "data_type_exists": True, "table_size": "small"},
+    {"schema": "public", "table": "bank_store_pos", "type": "full", "data_type_exists": True, "table_size": "large"},
+    {"schema": "public", "table": "bank_retail_chains", "type": "full", "data_type_exists": True, "table_size": "small"},
+    {"schema": "public", "table": "bank_stores", "type": "full", "data_type_exists": True, "table_size": "large"},
+    {"schema": "public", "table": "bank_customers", "type": "full", "data_type_exists": True, "table_size": "large"},
+    {"schema": "public", "table": "bank_system_wallets", "type": "full", "data_type_exists": True, "table_size": "small"},
+    {"schema": "public", "table": "bank_wallet_settings", "type": "full", "data_type_exists": True, "table_size": "large"}
+]
+
+postgres_tables_silver_shipay_daily
+[
+    {
+        "table": "customers",
+        "table": "retail_chains",
+        "table": "store_pos",
+	"table": "pos_vendors",
+	"table": "pos_products",
+	"table": "orders",
+	"table": "stores",
+	"table": "system_wallets",
+	"table": "wallet_settings",
+	"table": "bank_slip"
+	}
+]

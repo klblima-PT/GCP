@@ -1,0 +1,17 @@
+id  ,
+uuid  ,
+external_id  ,
+created_at
+updated_at   ,
+cast(created_at as date) as created_at_date ,
+expire_date  ,
+cast(payment_code as varchar(250)) as payment_code ,
+total_amount  ,
+rebate_amount  ,
+days_until_expiration  ,
+days_until_negation  ,
+order_id  ,
+covenant_code  ,
+days_valid_after_due  ,
+cast(payment_method as varchar(250)) as payment_method ,
+now() as data_carga

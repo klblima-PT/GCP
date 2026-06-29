@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS  `production-347022.ab_operaca.dbo_historico_aprov_diaria_v10` (
+
+IDCTR	string	,
+NUMPARCELA	string	,
+CODEVENTO	string	,
+NUMSEQ	string	,
+VLRVARIACAOJUROS	string	,
+DATA_ABERTURA	smalldatetime	,
+DATAREFERENCIA	smalldatetime	,
+FATOR	string	,
+dt_carga_raw timestamp,
+	
+  PRIMARY KEY
+    () NOT ENFORCED
+)
+PARTITION BY  -- Replace by Client options sent
+
+CLUSTER BY 
+    
+
+OPTIONS (
+  DESCRIPTION = 'Table dbo_parcelas_varejo T clustered by id'
+); 

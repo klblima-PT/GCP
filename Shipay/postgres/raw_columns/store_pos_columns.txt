@@ -1,0 +1,11 @@
+id  ,
+cast(created_at as date) as created_at   ,
+updated_at   ,
+cast(name as varchar(50)) as name,
+cast(active as varchar(50)) as active ,
+uuid  ,
+cast(fixed_amount as varchar(50)) as fixed_amount,
+cast(meta_data as varchar(50)) as meta_data ,
+cast(store_id as varchar(50)) as store_id,
+cast(category as varchar(50)) as category ,
+cast(client_token_reference as varchar(50)) as client_token_reference 

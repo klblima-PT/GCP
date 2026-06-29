@@ -1,0 +1,14 @@
+id  ,
+uuid  ,
+ name ,
+email  ,
+access_key  ,
+secret_key  ,
+cast(degree as varchar(50)) as  degree ,
+created_at
+updated_at   ,
+cast(created_at as date) as created_at_date ,
+access_key_reference  ,
+secret_key_reference  ,
+external_crm_id  ,
+now() as data_carga

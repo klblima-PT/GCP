@@ -1,0 +1,13 @@
+id  ,
+uuid  ,
+cast(created_at as date) as created_at   ,
+updated_at   ,
+active  ,
+wallet_id  ,
+name  ,
+customer_id  ,
+psp_provider_id  ,
+pix_dict_key  ,
+cast(transaction_type as varchar(50)) as transaction_type, 
+bank_slip_settings_id  ,
+withdraw_bank_id  

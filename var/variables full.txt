@@ -1,0 +1,14 @@
+
+    #{"schema": "public", "table": "bank_slip", "type": "delta", "data_type_exists": True, "table_size": "large" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "orders", "type": "delta", "data_type_exists": True, "table_size": "large" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "pos_products", "type": "delta", "data_type_exists": True, "table_size": "small" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "pos_vendors", "type": "delta", "data_type_exists": True, "table_size": "small" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "store_pos", "type": "delta", "data_type_exists": True, "table_size": "large" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "retail_chains", "type": "delta", "data_type_exists": True, "table_size": "small" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "stores", "type": "delta", "data_type_exists": True, "table_size": "large" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "customers", "type": "delta", "data_type_exists": True, "table_size": "large" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "system_wallets", "type": "delta", "data_type_exists": True, "table_size": "small" "column_primary" : "created_at", "column_secondary": ""},
+    #{"schema": "public", "table": "wallet_settings", "type": "delta", "data_type_exists": True, "table_size": "large" "column_primary" : "created_at", "column_secondary": ""},
+
+
+]

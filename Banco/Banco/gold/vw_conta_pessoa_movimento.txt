@@ -1,0 +1,103 @@
+/* PROJETO : BANCO RENDIMENTO */
+/* AUTOR: KLEBER - HVAR */
+/* PROJETO:  SILVER_BANCO_RENDIMENTO */
+/* ULTIMA ATUALIZACAO : 28/06/2024 */
+
+/* REBUILD */
+/* - Visão contemplando as PERSONAS ( PJ / PF)  + A conta digital que ela possue  + As movimentações dessa conta digital.*/
+
+
+WITH conta_digital as (
+
+select distinct 
+codagencia, 
+nroconta,
+cgc_cpfendereco, 
+databertura, 
+codgerente, 
+codsituacao, 
+restricao, 
+dt_carga_bronze 
+from `corporativo-poc-hvar.bronze_bi_rendimento.bi_contacorrente_tbl_contacorrente_conta`
+), 
+
+
+movimentacao as (
+
+select distinct 
+codagencia, 
+nroconta, 
+datamovto, 
+nromovimento, 
+natureza,
+bcoorigem, 
+ageorigem, 
+origem, 
+valor,
+tarifado,
+debitado, 
+entradaage, 
+dt_carga_bronze 
+from `corporativo-poc-hvar.bronze_bi_rendimento.bi_contacorrente_tbl_contacorrentemovto` 
+),
+
+persona_pj as (
+
+select distinct 
+codcliente, 
+cgc_cpf , 
+nome, 
+tipopessoa, 
+codgerente,
+numdocumento,
+tipodocumento, 
+orgaoexpedidor,
+uf_orgaoexpedidor, 
+dt_carga_bronze 
+from `corporativo-poc-hvar.bronze_bi_rendimento.bi_infobank_tbl_infobanc_clientes`
+
+),
+persona_pf as (
+
+select distinct 
+cgc_cpf,
+nome, 
+nomefantasia, 
+tipopessoa,
+status,
+numdocumento, 
+tipodocumento, 
+orgaoexpedidor,
+dt_carga_bronze  
+from `corporativo-poc-hvar.bronze_bi_rendimento.bi_infobank_tbl_infobanc_pessoas` 
+)
+
+/* Relacionamento dos dados */
+
+select a.codagencia, 
+a.nroconta,
+a.cgc_cpfendereco as cpf,  
+a.databertura, 
+b.codcliente, 
+b.nome , 
+b.tipopessoa, 
+c.nome as nome_banco, 
+c.nomefantasia,  
+d.datamovto, 
+d.nromovimento, 
+d.natureza,
+d.bcoorigem, 
+d.ageorigem, 
+d.origem, 
+d.tarifado,
+d.debitado, 
+d.entradaage , 
+d.valor 
+
+from conta_digital a 
+
+inner join persona_pj b on a.cgc_cpfendereco =  b.cgc_cpf
+inner join persona_pf c on a.cgc_cpfendereco = c.cgc_cpf and b.cgc_cpf =  c.cgc_cpf
+inner join movimentacao d on a.codagencia = d.codagencia and  a.nroconta = d.nroconta
+
+where cgc_cpfendereco = '68900810000138'

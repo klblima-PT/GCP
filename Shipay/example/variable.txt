@@ -1,0 +1,13 @@
+{
+	"project_id":"production-347022",
+	"staging_location":"staging_shipay",
+	"KMSkey":"",
+	"temp_dir":"temp",
+	"bigquery_temp_dir":"bigquery_temp_data",
+	"subnetwork":""
+}
+
+variaveis de ambiente para o projeto da POC do Banco Rendimento
+
+
+projects/833103898301/secrets/eng-data-postgres

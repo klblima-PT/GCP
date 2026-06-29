@@ -1,0 +1,10 @@
+{
+	"project_id":"corporativo-poc-hvar",
+	"staging_location":"BI_RENDIMENTO",
+	"KMSkey":"",
+	"temp_dir":"temp",
+	"bigquery_temp_dir":"bigquery_temp_data",
+	"subnetwork":""
+}
+
+variaveis de ambiente para o projeto da POC do Banco Rendimento

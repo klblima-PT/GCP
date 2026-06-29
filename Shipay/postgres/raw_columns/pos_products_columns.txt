@@ -1,0 +1,13 @@
+id  ,
+uuid  ,
+name  ,
+email  ,
+pos_vendor_id  ,
+active  ,
+cast(created_at as date) as created_at   ,
+updated_at   ,
+cast(degree as varchar(50)) as  degree   ,
+fake_register  ,
+notify  ,
+logo  ,
+external_crm_id  
